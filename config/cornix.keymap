@@ -146,12 +146,6 @@
     combos {
         compatible = "zmk,combos";
 
-        cb_ltm {
-            bindings = <&kp ESC>;
-            key-positions = <2 4>;
-            layers = <0>;
-        };
-
         cb_enter {
             bindings = <&kp RET>;
             key-positions = <21 19>;
@@ -171,11 +165,6 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <14 16>;
-        };
-
-        cb_tab {
-            bindings = <&kp TAB>;
-            key-positions = <13 14>;
         };
 
         cb_minus {
@@ -272,5 +261,3 @@
         };
     };
 };
-
-
