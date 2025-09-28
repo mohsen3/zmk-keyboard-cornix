@@ -131,6 +131,16 @@
             bindings = <&kp LS(LG(V))>;
             key-positions = <28 29>;
         };
+
+        cb_cmd_w {
+            bindings = <&kp LG(W)>;
+            key-positions = <1 2>;
+        };
+
+        cb_cmd_a {
+            bindings = <&kp LG(A)>;
+            key-positions = <13 16>;
+        };
     };
 
     keymap {
