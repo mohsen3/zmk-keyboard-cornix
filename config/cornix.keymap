@@ -144,7 +144,7 @@
 
         cb_mouse_left_click {
             bindings = <&mkp MB1>;
-            key-positions = <17 15>;
+            key-positions = <16 17>;
         };
 
         cb_cmd_t {
@@ -155,6 +155,16 @@
         cb_caps_word {
             bindings = <&caps_word>;
             key-positions = <16 19>;
+        };
+
+        cb_bt_0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <24 12>;
+        };
+
+        cb_bt_1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <38 24>;
         };
     };
 
@@ -172,10 +182,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W             &kp E             &kp R  &kp T                    &kp Y            &kp U  &kp I              &kp O             &kp P               &kp BACKSPACE
-&kp TAB           &kp A         &kp S             &kp D             &kp F  &kp G                    &kp H            &kp J  &kp K              &kp L             &kp SEMI            &kp SQT
-&kp LEFT_SHIFT    &kp Z         &kp X             &kp C             &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA          &kp DOT           &kp SLASH           &kp BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &mo 2  &kp SPACE                &kp RIGHT_SHIFT  &mo 1  &kp RIGHT_COMMAND  &kp LG(UP_ARROW)  &kp LG(DOWN_ARROW)  &kp ENTER
+&kp ESCAPE        &kp Q         &kp W             &kp E             &kp R  &kp T                    &kp Y            &kp U  &kp I              &kp O           &kp P         &kp BACKSPACE
+&kp TAB           &kp A         &kp S             &kp D             &kp F  &kp G                    &kp H            &kp J  &kp K              &kp L           &kp SEMI      &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X             &kp C             &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA          &kp DOT         &kp SLASH     &kp BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &mo 2  &kp SPACE                &kp RIGHT_SHIFT  &mo 1  &kp RIGHT_COMMAND  &msc SCRL_DOWN  &msc SCRL_UP  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -184,10 +194,10 @@
         Navi_layer {
             display-name = "Navi";
             bindings = <
-&none         &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1  &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &none
-&bt BT_SEL 0  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &none     &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &none
-&bt BT_SEL 1  &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &trans    &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &none
-&bt BT_SEL 2  &none  &none           &trans          &trans           &trans                          &trans    &trans          &trans              &none                &none            &none
+&kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1  &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &none
+&trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &none     &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &none
+&trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &trans    &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &none
+&trans     &none  &none           &trans          &trans           &trans                          &trans    &trans          &trans              &none                &none            &none
             >;
         };
 
