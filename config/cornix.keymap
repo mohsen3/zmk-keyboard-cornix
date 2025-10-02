@@ -102,16 +102,6 @@
             key-positions = <33 34>;
         };
 
-        cb_question {
-            bindings = <&kp QUESTION>;
-            key-positions = <20 21>;
-        };
-
-        cb_slash {
-            bindings = <&kp KP_SLASH>;
-            key-positions = <34 35>;
-        };
-
         cb_cut {
             bindings = <&kp LG(X)>;
             key-positions = <25 26>;
@@ -166,6 +156,21 @@
             bindings = <&bt BT_SEL 1>;
             key-positions = <38 24>;
         };
+
+        cb_grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <0 1>;
+        };
+
+        cb_undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <25 28>;
+        };
+
+        cb_delete_word {
+            bindings = <&kp LA(DELETE)>;
+            key-positions = <16 15 14>;
+        };
     };
 
     keymap {
@@ -182,10 +187,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W             &kp E             &kp R  &kp T                    &kp Y     &kp U  &kp I              &kp O           &kp P         &kp BACKSPACE
-&kp TAB           &kp A         &kp S             &kp D             &kp F  &kp G                    &kp H     &kp J  &kp K              &kp L           &kp SEMI      &kp SQT
-&kp LEFT_SHIFT    &kp Z         &kp X             &kp C             &kp V  &kp B      &none  &none  &kp N     &kp M  &kp COMMA          &kp DOT         &kp SLASH     &kp BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &kp LEFT_COMMAND  &mo 2  &kp SPACE                &mkp MB1  &mo 1  &kp RIGHT_COMMAND  &msc SCRL_DOWN  &msc SCRL_UP  &kp ENTER
+&kp ESCAPE        &kp Q         &kp W           &kp E             &kp R  &kp T                    &kp Y     &kp U  &kp I              &kp O           &kp P         &kp BACKSPACE
+&kp TAB           &kp A         &kp S           &kp D             &kp F  &kp G                    &kp H     &kp J  &kp K              &kp L           &kp SEMI      &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X           &kp C             &kp V  &kp B      &none  &none  &kp N     &kp M  &kp COMMA          &kp DOT         &kp SLASH     &kp BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_COMMAND  &mo 2  &kp SPACE                &mkp MB1  &mo 1  &kp RIGHT_COMMAND  &msc SCRL_DOWN  &msc SCRL_UP  &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -197,16 +202,16 @@
 &kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1                        &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &none
 &trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp RS(RA(RC(RG(ENTER))))       &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &none
 &trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &none
-&trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &none                &none            &none
+&trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &none
             >;
         };
 
         Num {
             bindings = <
-&kp MINUS  &kp N1     &kp N2          &kp N3            &kp N4     &kp N5                   &kp LS(CARET)   &kp LS(AMPS)     &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)   &trans
-&kp PLUS   &kp N6     &kp N7          &kp N8            &kp N9     &kp N0                   &kp LS(EXCL)    &kp LS(AT)       &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &trans
-&kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp SINGLE_QUOTE  &kp COMMA  &kp DOT  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION   &trans
-&kp STAR   &trans     &trans          &trans            &trans     &trans                   &trans          &trans           &trans         &trans        &trans         &trans
+&kp MINUS  &kp N1     &kp N2          &kp N3     &kp N4     &kp N5                   &kp LS(CARET)   &kp LS(AMPS)     &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)      &trans
+&kp PLUS   &kp N6     &kp N7          &kp N8     &kp N9     &kp N0                   &kp LS(EXCL)    &kp LS(AT)       &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)     &trans
+&kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp GRAVE  &kp COMMA  &kp DOT  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION      &trans
+&kp STAR   &trans     &trans          &trans     &trans     &trans                   &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
             >;
         };
     };
