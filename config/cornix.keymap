@@ -132,7 +132,7 @@
             key-positions = <13 16>;
         };
 
-        cb_mouse_left_click {
+        cb_mouse_left_click_2 {
             bindings = <&mkp MB1>;
             key-positions = <16 17>;
         };
@@ -214,10 +214,10 @@
         Navi_layer {
             display-name = "Navi";
             bindings = <
-&kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1                        &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &none
-&trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp RS(RA(RC(RG(ENTER))))       &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &none
-&trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &none
-&trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &none
+&kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1                        &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &kp RS(RA(RC(RG(A))))
+&trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp RS(RA(RC(RG(ENTER))))       &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &kp RG(RC(RA(RS(B))))
+&trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &kp RG(RC(RA(RS(C))))
+&trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &kp RG(RC(RA(RS(D))))
             >;
         };
 
