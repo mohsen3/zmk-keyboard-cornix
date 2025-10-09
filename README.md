@@ -37,6 +37,34 @@ Cornix is a Corne‑inspired split ergonomic keyboard featuring a compact 3×6 c
 
 > this project owner is RMK contributor too, support RMK https://rmk.rs/ please 
 
+## Improvements in This Fork
+
+This fork includes several enhancements over the original repository:
+
+### Bluetooth Connectivity
+- **Enhanced BLE transmit power** - Increased to +8dBm for better range and reliability
+- **Improved connection stability** - Disabled 2Mbps PHY for better compatibility with various Bluetooth chipsets
+- **Optimized connection intervals** - Tuned parameters for more reliable split keyboard communication
+
+### Keymap Customizations
+- **Removed home row mods** - Simplified typing experience by removing home row modifiers
+- **Enhanced combos** - Added useful key combinations:
+  - Copy/paste combos for faster workflow
+  - Mouse button (MB1) combo
+  - Caps Word support
+  - Common shortcuts: Cmd+W, Cmd+A, Cmd+T
+  - Window movement keys
+  - Hyper key combinations (Hyper+A/B/C/D)
+- **Mouse integration** - Changed right shift to left click for integrated mouse support
+- **Optimized key layout** - Refined key positions and fixed space/shift key behavior
+
+### Build System
+- **Streamlined builds** - Removed unused Cornix 42 configuration and artifacts to speed up CI/CD
+- **Cleaner codebase** - Removed unused layers and unnecessary combos
+
+### Documentation
+- **English comments** - Translated all Chinese comments to English for better accessibility
+
 ## --Bootloader Recovery Instructions--
 
 -- The original RMK firmware removed the SoftDevice, so before flashing `zmk.uf2`, you need to restore the SoftDevice first. For specific steps, please refer to [bootloader/README.md](./bootloader/README.md). --
