@@ -150,11 +150,13 @@
         cb_bt_0 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <24 12>;
+            require-prior-idle-ms = <1000>;
         };
 
         cb_bt_1 {
             bindings = <&bt BT_SEL 1>;
             key-positions = <38 24>;
+            require-prior-idle-ms = <1000>;
         };
 
         cb_grave {
@@ -175,16 +177,25 @@
         cb_mouse_left_click {
             bindings = <&mkp LCLK>;
             key-positions = <6 7>;
+            require-prior-idle-ms = <500>;
         };
 
         cb_mouse_middle_click {
             bindings = <&mkp MCLK>;
             key-positions = <6 8>;
+            require-prior-idle-ms = <500>;
         };
 
         cb_mouse_right_click {
             bindings = <&mkp RCLK>;
             key-positions = <7 8>;
+            require-prior-idle-ms = <500>;
+        };
+
+        cb_bluetooth_clear_profiles {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <0 12 24 38>;
+            require-prior-idle-ms = <1000>;
         };
     };
 
