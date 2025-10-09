@@ -58,9 +58,13 @@ This fork includes several enhancements over the original repository:
 - **Mouse integration** - Changed right shift to left click for integrated mouse support
 - **Optimized key layout** - Refined key positions and fixed space/shift key behavior
 
-### Build System
+### Build System & Code Cleanup
 - **Streamlined builds** - Removed unused Cornix 42 configuration and artifacts to speed up CI/CD
 - **Cleaner codebase** - Removed unused layers and unnecessary combos
+- **Dead code removal** - Eliminated orphaned configuration files:
+  - Removed unused `cornix_ph_left` board variant
+  - Removed orphaned `cornix.conf` base config
+  - Removed legacy `boards/arm/cornix/cornix.keymap` (superseded by `config/cornix.keymap`)
 
 ### Documentation
 - **English comments** - Translated all Chinese comments to English for better accessibility
