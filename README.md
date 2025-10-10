@@ -16,11 +16,30 @@ This community firmwarw has been tested with Cornix using ZMK and provides full 
 
 ### about RGB
 
-Cornix shield has 2 RGB LEDs on each side, controled by PWM in the stock firmware.
+Cornix shield has 2 RGB LEDs on each side (4 LEDs total), controlled by WS2812 via SPI.
 
-The replacement solution is adapting the RGB indicator module to light up these RGBs, to achieve the same effect as the stock firmware, which uses the RGB LEDs to indicate battery status and connection status. 
+The RGB LED indicator module is **now enabled by default** in this repository! The LEDs provide visual feedback for:
 
-But it is not supported yet in this repository.  PR is welcome!
+**Battery Status Indicators:**
+- Green: 80-100% battery
+- Yellow: 50-79% battery
+- Orange: 20-49% battery
+- Red: 0-19% battery
+- Blue: Currently charging
+
+**Connection Status Indicators:**
+- Solid color: Connected to host
+- Slow blink: Disconnected/Searching for connection
+- Fast blink: Pairing mode
+
+**LED Configuration:**
+- Brightness: 64/255 (default, optimized for battery life)
+- LED count: 2 per side
+- Pin mapping: Left (P0.24), Right (P0.13)
+
+To adjust brightness or disable LEDs, edit `boards/shields/cornix_indicator/cornix_indicator.conf` and modify `CONFIG_RGBLED_WIDGET_BRIGHTNESS` (0-255).
+
+**Note:** LED indicators consume additional power. If you experience reduced battery life, you can disable them by commenting out the `shield: cornix_indicator` lines in `build.yaml`.
 
 ## Supported Hardware: Cornix Split Keyboard
 

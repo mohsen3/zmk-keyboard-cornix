@@ -14,11 +14,11 @@
 ---
 include:
   - board: cornix_left
-    #shield: cornix_indicator
+    shield: cornix_indicator
     artifact-name: cornix_left
 
   - board: cornix_right
-    #shield: cornix_indicator
+    shield: cornix_indicator
     artifact-name: cornix_right
 
   - board: cornix_right
