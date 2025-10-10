@@ -69,8 +69,9 @@ CONFIG_ZMK_BLE_PASSKEY_ENTRY=n
 #BLE-clean
 CONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=n
 
-# Enable NKRO (N-Key Rollover) for unlimited simultaneous key presses
-CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y
+# Disable NKRO - causes compatibility issues with some systems
+# Use standard 6KRO (6-Key Rollover) for better compatibility
+CONFIG_ZMK_HID_REPORT_TYPE_NKRO=n
 
 CONFIG_ZMK_POINTING=y
 
