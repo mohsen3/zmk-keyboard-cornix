@@ -77,4 +77,6 @@ CONFIG_USB_HID_POLL_INTERVAL_MS=1
 # Use standard 6KRO (6-Key Rollover) for better compatibility
 CONFIG_ZMK_HID_REPORT_TYPE_NKRO=n
 
+CONFIG_ZMK_POINTING=y
+
 # vim: set ft=kconfig:
