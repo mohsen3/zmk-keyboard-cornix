@@ -47,10 +47,6 @@ This firmware has been optimized for minimal latency. Here's what has been tuned
 
 ### Current Optimizations
 
-**Matrix Scanning:**
-- Poll interval: 2ms (5x faster than default 10ms)
-- Location: `boards/arm/cornix/cornix.dtsi:26`
-
 **Debouncing:**
 - Press debounce: 1ms (3x faster than previous 3ms)
 - Release debounce: 5ms (balanced for stability)
@@ -87,10 +83,8 @@ CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=7  # More stable release
 
 **For better battery life at cost of latency:**
 ```kconfig
-# In cornix.dtsi:
-poll-interval-ms = <5>;  # Less aggressive scanning
-
 # In cornix_*_defconfig:
+CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=3    # More conservative debounce
 CONFIG_BT_PERIPHERAL_PREF_MAX_INT=12    # Longer intervals
 CONFIG_BT_PERIPHERAL_PREF_LATENCY=30    # More power efficient
 ```
@@ -136,16 +130,14 @@ This fork includes several enhancements over the original repository:
 
 ### Performance Optimizations (Low Latency)
 - **Ultra-fast debouncing** - Reduced press debounce from 3ms to 1ms for instant key response
-- **Aggressive matrix polling** - Reduced scan interval from 10ms to 2ms for faster key detection
 - **Optimized BLE connection** - Tighter connection intervals (6-9ms) and reduced latency (10 vs 30)
 - **Fast HID processing** - Higher priority work queue and optimized BLE buffer sizes
 - **1ms USB polling** - When using wired mode, USB HID reports at 1000Hz
 
 **Expected latency improvements:**
-- Debounce: 2-3ms faster
-- Matrix scan: ~8ms faster
+- Debounce: 2ms faster (press detection)
 - BLE connection: ~15-20ms lower average latency
-- **Total improvement: 25-31ms lower end-to-end latency**
+- **Total improvement: 17-22ms lower end-to-end latency**
 
 ### Bluetooth Connectivity
 - **Enhanced BLE transmit power** - Increased to +8dBm for better range and reliability
