@@ -73,4 +73,7 @@ CONFIG_SYSTEM_WORKQUEUE_PRIORITY=-2
 # Reduce USB polling interval for lower latency
 CONFIG_USB_HID_POLL_INTERVAL_MS=1
 
+# Enable NKRO (N-Key Rollover) for unlimited simultaneous key presses
+CONFIG_ZMK_HID_REPORT_TYPE_NKRO=y
+
 # vim: set ft=kconfig:
