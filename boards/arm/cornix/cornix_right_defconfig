@@ -59,7 +59,7 @@ CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 
 # Performance optimizations for reduced latency
 # Eager debouncing for faster key press detection
-CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=1
+CONFIG_ZMK_KSCAN_DEBOUNCE_PRESS_MS=2
 CONFIG_ZMK_KSCAN_DEBOUNCE_RELEASE_MS=5
 
 # Faster BLE queue processing

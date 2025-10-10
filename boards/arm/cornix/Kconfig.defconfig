@@ -20,10 +20,10 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
 # Optimized keyboard debouncing for low latency
-# Reduced press from 3ms to 1ms for faster response
+# Reduced press from 3ms to 2ms for faster response with stability
 # Release kept at 5ms for stability
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 1
+    default 2
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
     default 5
 
@@ -68,10 +68,10 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
 # Optimized keyboard debouncing for low latency
-# Reduced press from 3ms to 1ms for faster response
+# Reduced press from 3ms to 2ms for faster response with stability
 # Release kept at 5ms for stability
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 1
+    default 2
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
     default 5
 
