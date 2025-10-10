@@ -20,6 +20,10 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         wakeup-source;
+
+        // Performance optimization: faster matrix polling
+        // Default is 10ms, reduced to 2ms for lower latency
+        poll-interval-ms = <2>;
     };
 
 };

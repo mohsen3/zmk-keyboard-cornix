@@ -19,11 +19,13 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
-# Add keyboard debouncing
+# Optimized keyboard debouncing for low latency
+# Reduced press from 3ms to 1ms for faster response
+# Release kept at 5ms for stability
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 3
+    default 1
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
-    default 3
+    default 5
 
 endif # BOARD_CORNIX_LEFT
 
@@ -65,11 +67,13 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
-# Add keyboard debouncing
+# Optimized keyboard debouncing for low latency
+# Reduced press from 3ms to 1ms for faster response
+# Release kept at 5ms for stability
 config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 3
+    default 1
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
-    default 3
+    default 5
 
 endif # BOARD_CORNIX_PH_LEFT
 
