@@ -102,3 +102,4 @@ CONFIG_SYSTEM_WORKQUEUE_PRIORITY=-2
 
 # Reduce USB polling interval (if USB is ever enabled)
 CONFIG_USB_HID_POLL_INTERVAL_MS=1
+
