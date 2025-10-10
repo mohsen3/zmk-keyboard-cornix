@@ -3,8 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "boards/*"
-      - "config/*"
+      - "boards/**"
+      - "config/**"
+      - "build.yaml"
 
 jobs:
   build:
