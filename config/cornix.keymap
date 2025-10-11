@@ -236,6 +236,11 @@
             bindings = <&kp RA(RIGHT_ARROW)>;
             key-positions = <34 35>;
         };
+
+        cb_control_r_reverse_search {
+            bindings = <&kp LC(R)>;
+            key-positions = <4 3>;
+        };
     };
 
     keymap {
