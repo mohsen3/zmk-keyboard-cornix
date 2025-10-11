@@ -275,6 +275,8 @@
 &trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &kp RG(RC(RA(RS(C))))
 &trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &kp RG(RC(RA(RS(D))))
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Num {
@@ -284,6 +286,8 @@
 &kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp GRAVE  &kp COMMA  &kp DOT  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION      &trans
 &kp STAR   &trans     &trans          &trans     &trans     &trans                   &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Apps_layer {
@@ -294,6 +298,8 @@
 &trans  &trans                        &trans                 &kp RS(RG(RC(RA(C))))  &kp RS(RG(RC(RA(V))))  &kp RS(RG(RC(RA(B))))  &trans  &trans  &kp LC(RA(LG(LEFT_ARROW)))  &kp LC(RA(LG(DOWN)))  &kp LC(RA(LG(UP_ARROW)))  &kp LC(RA(LG(RIGHT)))  &kp RC(RA(LG(RETURN)))    &trans
 &trans  &trans                        &trans                 &trans                 &trans                 &trans                                 &trans                    &trans                  &trans                     &trans                 &trans                    &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
