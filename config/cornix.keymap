@@ -24,6 +24,7 @@
 #define NAVI   5
 #define NUM    6
 #define DEBUG  7
+#define APPS   8
 
 // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
 
@@ -282,6 +283,16 @@
 &kp PLUS   &kp N6     &kp N7          &kp N8     &kp N9     &kp N0                   &kp LS(EXCL)    &kp LS(AT)       &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)     &trans
 &kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp GRAVE  &kp COMMA  &kp DOT  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION      &trans
 &kp STAR   &trans     &trans          &trans     &trans     &trans                   &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
+            >;
+        };
+
+        Apps_layer {
+            display-name = "Apps";
+            bindings = <
+&trans  &trans                        &kp RS(RG(RC(RA(W))))  &kp RS(RG(RC(RA(E))))  &kp RS(RG(RC(RA(R))))  &kp RS(RG(RC(RA(T))))                   &kp RS(RG(RC(RA(Y))))     &trans                  &kp RS(RG(RC(RA(I))))      &kp RS(RG(RC(RA(O))))  &kp RS(RG(RC(RA(P))))     &trans
+&trans  &kp RS(RG(RC(RA(A))))         &kp RS(RG(RC(RA(S))))  &kp RS(RG(RC(RA(D))))  &kp RS(RG(RC(RA(F))))  &kp RS(RG(RC(RA(G))))                   &kp LG(LBKT)              &kp LG(RBKT)            &kp RC(RA(LG(LEFT)))       &kp RC(RA(LG(RIGHT)))  &kp RC(RA(LG(UP)))        &kp RS(RG(RC(RA(ENTER))))
+&trans  &trans                        &trans                 &kp RS(RG(RC(RA(C))))  &kp RS(RG(RC(RA(V))))  &kp RS(RG(RC(RA(B))))  &trans  &trans  &kp LC(RA(LG(LEFT_ARROW)))  &kp LC(RA(LG(DOWN)))  &kp LC(RA(LG(UP_ARROW)))  &kp LC(RA(LG(RIGHT)))  &kp RC(RA(LG(RETURN)))    &trans
+&trans  &trans                        &trans                 &trans                 &trans                 &trans                                 &trans                    &trans                  &trans                     &trans                 &trans                    &trans
             >;
         };
     };
