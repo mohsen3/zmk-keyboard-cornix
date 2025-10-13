@@ -293,10 +293,10 @@
         Apps_layer {
             display-name = "Apps";
             bindings = <
-&trans  &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                              &none   &trans            &none                   &kp RG(O)             &kp RG(P)          &trans
-&trans  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                  &none   &kp LG(LBKT)      &kp RG(LEFT_BRACE)      &kp RG(RIGHT_BRACE)   &kp LG(RBKT)       &none
-&trans  &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &trans  &none   &kp RA(RG(LEFT))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))  &trans
-&trans  &trans                 &trans                 &trans                 &trans                 &trans                                 &trans  &trans            &trans                  &trans                &trans             &kp RG(RS(ENTER))
+&trans  &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                              &kp RG(NUMBER_9)  &trans            &none                   &kp RG(O)             &kp RG(P)          &trans
+&trans  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                  &none             &kp LG(LBKT)      &kp RG(LEFT_BRACE)      &kp RG(RIGHT_BRACE)   &kp LG(RBKT)       &none
+&trans  &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &trans  &none             &kp RA(RG(LEFT))  &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))  &trans
+&trans  &trans                 &trans                 &trans                 &trans                 &trans                                 &trans            &trans            &trans                  &trans                &trans             &kp RG(RS(ENTER))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
