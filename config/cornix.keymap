@@ -145,6 +145,7 @@
             bindings = <&kp LG(T)>;
             key-positions = <5 4>;
             timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
         };
 
         cb_caps_word {
