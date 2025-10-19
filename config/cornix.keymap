@@ -127,6 +127,7 @@
             bindings = <&kp LG(W)>;
             key-positions = <1 2>;
             timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
         };
 
         cb_cmd_a {
@@ -145,7 +146,7 @@
             bindings = <&kp LG(T)>;
             key-positions = <5 4>;
             timeout-ms = <50>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <300>;
         };
 
         cb_caps_word {
@@ -172,6 +173,7 @@
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
             timeout-ms = <50>;
+            require-prior-idle-ms = <300>;
         };
 
         cb_undo {
@@ -217,6 +219,7 @@
         cb_screenshot {
             bindings = <&kp LS(LC(LG(NUMBER_4)))>;
             key-positions = <5 4 3>;
+            require-prior-idle-ms = <300>;
         };
 
         cb_left {
@@ -242,6 +245,7 @@
         cb_control_r_reverse_search {
             bindings = <&kp LC(R)>;
             key-positions = <4 3>;
+            require-prior-idle-ms = <300>;
         };
     };
 
