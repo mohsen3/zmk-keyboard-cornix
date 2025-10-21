@@ -39,13 +39,19 @@ CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 # Disable 2Mbps PHY for better compatibility
 CONFIG_BT_CTLR_PHY_2M=n
 
-# Optimized connection intervals for low latency
-# Reduced intervals from 6-12 to 6-9 for faster response
-# Reduced latency from 30 to 10 for more responsive connection
+# Optimized connection intervals for signal reliability
+# Settings tuned to handle physical signal blockage (e.g., body between keyboard halves)
+# Higher latency and timeout provide tolerance for brief signal interruptions
 CONFIG_BT_PERIPHERAL_PREF_MIN_INT=6
-CONFIG_BT_PERIPHERAL_PREF_MAX_INT=9
-CONFIG_BT_PERIPHERAL_PREF_LATENCY=10
-CONFIG_BT_PERIPHERAL_PREF_TIMEOUT=400
+CONFIG_BT_PERIPHERAL_PREF_MAX_INT=12
+CONFIG_BT_PERIPHERAL_PREF_LATENCY=30
+CONFIG_BT_PERIPHERAL_PREF_TIMEOUT=500
+
+# Split-specific BLE parameters for peripheral-to-central connection
+# These settings improve stability when signal is obstructed
+CONFIG_ZMK_SPLIT_BLE_PREF_INT=6
+CONFIG_ZMK_SPLIT_BLE_PREF_LATENCY=30
+CONFIG_ZMK_SPLIT_BLE_PREF_TIMEOUT=500
 
 CONFIG_INPUT=y
 
