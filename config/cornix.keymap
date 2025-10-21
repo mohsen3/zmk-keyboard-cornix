@@ -269,7 +269,7 @@
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &kp RIGHT_COMMAND  &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Navi_layer {
@@ -281,7 +281,7 @@
 &trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &kp RG(RC(RA(RS(D))))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Num {
@@ -292,7 +292,7 @@
 &kp STAR   &trans     &trans          &trans     &trans     &trans                   &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN &inc_dec_kp PG_UP PG_DN>;
         };
 
         Apps_layer {
@@ -304,7 +304,7 @@
 &trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                          &trans                 &trans                 &trans                  &trans                &trans               &kp RG(RS(ENTER))
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&msc SCRL_UP SCRL_DOWN &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
