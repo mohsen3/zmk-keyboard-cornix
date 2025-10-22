@@ -324,10 +324,10 @@
         Selection_layer {
             display-name = "Select";
             bindings = <
-&trans  &trans     &trans  &trans  &kp LS(PAGE_UP)    &kp LS(PAGE_DOWN)                   &trans  &trans                  &trans                  &trans                  &trans                   &trans
-&trans  &kp LG(A)  &trans  &trans  &trans             &trans                              &trans  &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
-&trans  &trans     &trans  &trans  &trans             &trans             &trans  &trans  &trans  &kp RS(RC(A))           &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW)) &kp RS(RC(E))            &trans
-&trans  &trans     &trans  &trans  &trans             &trans                             &trans  &trans                  &trans                  &kp LS(PAGE_DOWN)       &kp LS(PAGE_UP)          &trans
+&trans  &trans     &trans                  &trans                  &kp LS(LG(UP_ARROW))    &kp LS(LG(DOWN_ARROW))                   &kp LG(Y)  &trans                  &trans                  &trans                  &trans                   &trans
+&trans  &kp LG(A)  &kp LS(LC(E))           &kp LC(LG(SPACE))       &kp LG(F)               &trans                                   &trans     &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
+&trans  &kp LG(Z)  &kp LG(X)               &kp LG(C)               &kp LG(V)               &trans             &trans  &trans        &trans     &kp RS(RC(A))           &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW)) &kp RS(RC(E))            &trans
+&trans  &trans     &trans                  &trans                  &trans                  &trans                                   &trans     &trans                  &trans                  &kp LS(PAGE_DOWN)       &kp LS(PAGE_UP)          &trans
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
