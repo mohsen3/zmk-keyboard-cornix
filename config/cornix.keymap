@@ -25,6 +25,7 @@
 #define NUM    6
 #define DEBUG  7
 #define APPS   8
+#define SELECTION 9
 
 // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
 
@@ -254,6 +255,12 @@
             key-positions = <4 3>;
             require-prior-idle-ms = <300>;
         };
+
+        cb_selection_layer {
+            bindings = <&mo 9>;
+            key-positions = <39 41>;
+            timeout-ms = <50>;
+        };
     };
 
     keymap {
@@ -312,6 +319,18 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        Selection_layer {
+            display-name = "Select";
+            bindings = <
+&trans  &trans     &trans  &trans  &kp LS(PAGE_UP)    &kp LS(PAGE_DOWN)                   &trans  &trans                  &trans                  &trans                  &trans                   &trans
+&trans  &kp LG(A)  &trans  &trans  &trans             &trans                              &trans  &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
+&trans  &trans     &trans  &trans  &trans             &trans             &trans  &trans  &trans  &kp RS(RC(A))           &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW)) &kp RS(RC(E))            &trans
+&trans  &trans     &trans  &trans  &trans             &trans                             &trans  &trans                  &trans                  &kp LS(PAGE_DOWN)       &kp LS(PAGE_UP)          &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
