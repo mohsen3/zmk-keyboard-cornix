@@ -65,6 +65,34 @@
         };
     };
 
+    macros {
+        select_line: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LCTRL &kp LSHFT>
+                , <&macro_tap &kp E>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                ;
+        };
+
+        select_paragraph: select_paragraph {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp A>
+                , <&macro_release &kp LCTRL>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DOWN DOWN DOWN>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
+
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
@@ -325,7 +353,7 @@
             display-name = "Select";
             bindings = <
 &trans  &trans     &trans                  &trans                  &kp LS(LG(UP_ARROW))    &kp LS(LG(DOWN_ARROW))                   &kp LG(Y)  &trans                  &trans                  &trans                  &trans                   &trans
-&trans  &kp LG(A)  &kp LS(LC(E))           &kp LC(LG(SPACE))       &kp LG(F)               &trans                                   &trans     &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
+&trans  &kp LG(A)  &select_paragraph       &select_line            &kp LG(F)               &trans                                   &trans     &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
 &trans  &kp LG(Z)  &kp LG(X)               &kp LG(C)               &kp LG(V)               &trans             &trans  &trans        &trans     &kp RS(RC(A))           &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW)) &kp RS(RC(E))            &trans
 &trans  &trans     &trans                  &trans                  &trans                  &trans                                   &trans     &trans                  &trans                  &kp LS(PAGE_DOWN)       &kp LS(PAGE_UP)          &trans
             >;
