@@ -98,7 +98,11 @@
                 <&macro_press>,
                 <&kp LSHFT>,
                 <&macro_tap>,
-                <&kp DOWN DOWN DOWN>,
+                <&kp DOWN>,
+                <&macro_tap>,
+                <&kp DOWN>,
+                <&macro_tap>,
+                <&kp DOWN>,
                 <&macro_release>,
                 <&kp LSHFT>;
         };
