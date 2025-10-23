@@ -197,7 +197,7 @@
             bindings = <&kp LG(T)>;
             key-positions = <5 4>;
             timeout-ms = <50>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <900>;
         };
 
         cb_caps_word {
@@ -296,7 +296,7 @@
         cb_control_r_reverse_search {
             bindings = <&kp LC(R)>;
             key-positions = <4 3>;
-            require-prior-idle-ms = <300>;
+            require-prior-idle-ms = <900>;
         };
 
         cb_selection_layer {
