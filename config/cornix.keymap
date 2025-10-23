@@ -61,6 +61,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -69,27 +70,37 @@
         select_line: select_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LCTRL>
-                , <&macro_press &kp LCTRL &kp LSHFT>
-                , <&macro_tap &kp E>
-                , <&macro_release &kp LCTRL &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
         };
 
         select_paragraph: select_paragraph {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp A>
-                , <&macro_release &kp LCTRL>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp DOWN DOWN DOWN>
-                , <&macro_release &kp LSHFT>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp DOWN DOWN DOWN>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
     };
 
@@ -305,10 +316,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                    &kp Y            &kp U  &kp I              &kp O           &kp P         &kp BACKSPACE
-&kp TAB           &kp A         &kp S         &kp D  &kp F  &kp G                    &kp H            &kp J  &kp K              &kp L           &kp SEMI      &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C  &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA          &kp DOT         &kp SLASH     &mt RIGHT_SHIFT BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &kp RIGHT_COMMAND  &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
+&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                    &kp Y            &kp U  &kp I      &kp O           &kp P         &kp BACKSPACE
+&kp TAB           &kp A         &kp S         &kp D  &kp F  &kp G                    &kp H            &kp J  &kp K      &kp L           &kp SEMI      &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C  &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA  &kp DOT         &kp SLASH     &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &mo 4      &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
@@ -352,10 +363,10 @@
         Selection_layer {
             display-name = "Select";
             bindings = <
-&trans  &trans     &trans                  &trans                  &kp LS(LG(UP_ARROW))    &kp LS(LG(DOWN_ARROW))                   &kp LG(Y)  &trans                  &trans                  &trans                  &trans                   &trans
-&trans  &kp LG(A)  &select_paragraph       &select_line            &kp LG(F)               &trans                                   &trans     &kp LS(LEFT_ARROW)      &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)        &kp LS(RIGHT_ARROW)      &trans
-&trans  &kp LG(Z)  &kp LG(X)               &kp LG(C)               &kp LG(V)               &trans             &trans  &trans        &trans     &kp RS(RC(A))           &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW)) &kp RS(RC(E))            &trans
-&trans  &trans     &trans                  &trans                  &trans                  &trans                                   &trans     &trans                  &trans                  &kp LS(PAGE_DOWN)       &kp LS(PAGE_UP)          &trans
+&trans  &trans     &trans             &trans        &kp LS(LG(UP_ARROW))  &kp LS(LG(DOWN_ARROW))                  &kp LG(Y)  &trans              &trans                  &trans                   &trans               &trans
+&trans  &kp LG(A)  &select_paragraph  &select_line  &kp LG(F)             &trans                                  &trans     &kp LS(LEFT_ARROW)  &kp LS(DOWN_ARROW)      &kp LS(UP_ARROW)         &kp LS(RIGHT_ARROW)  &trans
+&trans  &kp LG(Z)  &kp LG(X)          &kp LG(C)     &kp LG(V)             &trans                  &trans  &trans  &trans     &kp RS(RC(A))       &kp RS(RA(LEFT_ARROW))  &kp RS(RA(RIGHT_ARROW))  &kp RS(RC(E))        &trans
+&trans  &trans     &trans             &trans        &trans                &trans                                  &trans     &trans              &trans                  &kp LS(PAGE_DOWN)        &kp LS(PAGE_UP)      &trans
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
