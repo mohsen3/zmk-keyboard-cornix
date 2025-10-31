@@ -253,16 +253,9 @@
             timeout-ms = <50>;
         };
 
-        cb_mouse_right_click {
-            bindings = <&mkp RCLK>;
-            key-positions = <7 8>;
-            require-prior-idle-ms = <500>;
-            timeout-ms = <50>;
-        };
-
         cb_bluetooth_clear_profiles {
             bindings = <&bt BT_CLR_ALL>;
-            key-positions = <0 12 24 38>;
+            key-positions = <11 23 37 49>;
             require-prior-idle-ms = <1000>;
             timeout-ms = <50>;
         };
@@ -273,36 +266,15 @@
             require-prior-idle-ms = <300>;
         };
 
-        cb_down {
-            bindings = <&kp DOWN_ARROW>;
-            key-positions = <19 20>;
-        };
-
-        cb_up {
-            bindings = <&kp UP_ARROW>;
-            key-positions = <20 21>;
-        };
-
-        cb_left_word {
-            bindings = <&kp RA(LEFT_ARROW)>;
-            key-positions = <33 34>;
-        };
-
-        cb_right_word {
-            bindings = <&kp RA(RIGHT_ARROW)>;
-            key-positions = <34 35>;
-        };
-
         cb_control_r_reverse_search {
             bindings = <&kp LC(R)>;
             key-positions = <4 3>;
             require-prior-idle-ms = <900>;
         };
 
-        cb_selection_layer {
-            bindings = <&mo 9>;
-            key-positions = <39 41>;
-            timeout-ms = <50>;
+        cb_left_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <2 3 4>;
         };
     };
 
