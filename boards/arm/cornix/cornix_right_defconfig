@@ -88,8 +88,8 @@ CONFIG_ZMK_HID_REPORT_TYPE_NKRO=n
 
 CONFIG_ZMK_POINTING=y
 
-# Enable deep sleep after 30 minutes of inactivity for power savings
-CONFIG_ZMK_SLEEP=y
-CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
+# Temporarily disable deep sleep to test if it's causing connection issues
+CONFIG_ZMK_SLEEP=n
+# CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000
 
 # vim: set ft=kconfig:
