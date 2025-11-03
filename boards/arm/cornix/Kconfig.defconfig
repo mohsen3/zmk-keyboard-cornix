@@ -58,7 +58,7 @@ config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
 
 endif # BOARD_CORNIX_RIGHT
 
-## Legacy peripheral device config
+## Peripheral device config for dongle mode (left side)
 if BOARD_CORNIX_PH_LEFT
 
 config ZMK_SPLIT_ROLE_CENTRAL
@@ -77,8 +77,27 @@ config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
 
 endif # BOARD_CORNIX_PH_LEFT
 
+## Peripheral device config for dongle mode (right side)
+if BOARD_CORNIX_PH_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default n
+
+# Optimized keyboard debouncing for low latency
+# Reduced press from 3ms to 2ms for faster response with stability
+# Release kept at 5ms for stability
+config ZMK_KSCAN_DEBOUNCE_PRESS_MS
+    default 2
+config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
+    default 5
+
+endif # BOARD_CORNIX_PH_RIGHT
+
 # Common options for both sides
-if BOARD_CORNIX_LEFT  || BOARD_CORNIX_DONGLE || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT
+if BOARD_CORNIX_LEFT  || BOARD_CORNIX_DONGLE || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_PH_RIGHT || BOARD_CORNIX_RIGHT
 
 
 config BT_CTLR
