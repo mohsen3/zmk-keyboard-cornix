@@ -24,7 +24,7 @@ include:
 
   # Dongle mode (XIAO nRF52840 as central, both halves as peripherals)
   - board: seeeduino_xiao_ble
-    shield: cornix_dongle_eyelash
+    shield: cornix_dongle_adapter cornix_dongle_eyelash
     artifact-name: cornix_dongle
 
   - board: cornix_ph_left
