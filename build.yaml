@@ -28,11 +28,11 @@ include:
     artifact-name: cornix_dongle
 
   - board: cornix_ph_left
-    shield: cornix_indicator
+    # No shield needed for dongle peripheral mode
     artifact-name: cornix_left_peripheral
 
   - board: cornix_ph_right
-    shield: cornix_indicator
+    # No shield needed for dongle peripheral mode
     artifact-name: cornix_right_peripheral
 
   # Settings reset

@@ -28,6 +28,9 @@ CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y
 
 # e73 config end
 
+# Keyboard name must match the dongle for split pairing
+CONFIG_ZMK_KEYBOARD_NAME="Cornix Dongle"
+
 # Peripheral mode - no USB, BLE only
 CONFIG_ZMK_USB=n
 CONFIG_ZMK_BLE=y
