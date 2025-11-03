@@ -30,12 +30,12 @@ include:
   - board: cornix_left
     shield: cornix_indicator
     artifact-name: cornix_left_peripheral
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_USB=n
+    cmake-args: -DCONF_FILE=cornix_left_peripheral.conf
 
   - board: cornix_right
     shield: cornix_indicator
     artifact-name: cornix_right_peripheral
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n -DCONFIG_ZMK_USB=n
+    cmake-args: -DCONF_FILE=cornix_right_peripheral.conf
 
   # Settings reset
   - board: cornix_right
