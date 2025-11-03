@@ -13,6 +13,7 @@
 #
 ---
 include:
+  # Dongleless mode (right half as central)
   - board: cornix_left
     shield: cornix_indicator
     artifact-name: cornix_left
@@ -21,6 +22,22 @@ include:
     shield: cornix_indicator
     artifact-name: cornix_right
 
+  # Dongle mode (XIAO nRF52840 as central, both halves as peripherals)
+  - board: seeeduino_xiao_ble
+    shield: cornix_dongle_eyelash
+    artifact-name: cornix_dongle
+
+  - board: cornix_left
+    shield: cornix_indicator
+    artifact-name: cornix_left_peripheral
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  - board: cornix_right
+    shield: cornix_indicator
+    artifact-name: cornix_right_peripheral
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+
+  # Settings reset
   - board: cornix_right
     shield: settings_reset
     artifact-name: reset
