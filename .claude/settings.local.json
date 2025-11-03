@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "WebFetch(domain:zmk.dev)",
+      "Bash(gh run view:*)",
+      "Bash(git push:*)",
+      "Bash(gh run list:*)",
+      "Bash(gh run watch:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "Read(//Users/mohsen.mollanoori/.hammerspoon/**)",
+      "Bash(git rebase:*)",
+      "Read(//private/tmp/**)",
+      "Read(//tmp/zmk-keyboard-cornix-original/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
