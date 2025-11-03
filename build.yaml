@@ -25,6 +25,22 @@ include:
   # Dongle mode (XIAO nRF52840 as central, both halves as peripherals)
   - board: seeeduino_xiao_ble
     shield: cornix_dongle_adapter cornix_dongle_eyelash
+    snippet: zmk-usb-logging
+    artifact-name: cornix_dongle_debug
+
+  - board: cornix_ph_left
+    shield: cornix_indicator
+    snippet: zmk-usb-logging
+    artifact-name: cornix_left_peripheral_debug
+
+  - board: cornix_ph_right
+    shield: cornix_indicator
+    snippet: zmk-usb-logging
+    artifact-name: cornix_right_peripheral_debug
+
+  # Production dongle mode (without logging)
+  - board: seeeduino_xiao_ble
+    shield: cornix_dongle_adapter cornix_dongle_eyelash
     artifact-name: cornix_dongle
 
   - board: cornix_ph_left
