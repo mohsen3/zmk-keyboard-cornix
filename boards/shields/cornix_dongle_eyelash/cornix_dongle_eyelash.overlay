@@ -11,9 +11,6 @@
         rows = <0>;
         events = <0>;
     };
-    aliases {
-        st7789 = &oled;
-    };
 };
 // vim: set ft=dts :
 &pinctrl {
@@ -39,7 +36,7 @@
 	compatible = "nordic,nrf-twi";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
-	oled: sh1106@3c {
+	st7789: oled: sh1106@3c {
         compatible = "sinowealth,sh1106";
         reg = <0x3c>;
         width = <129>;
