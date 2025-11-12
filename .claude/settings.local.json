@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(system_profiler:*)",
+      "Read(//dev/**)",
+      "Bash(ioreg:*)",
+      "Bash(curl:*)",
+      "Bash(paste:*)",
+      "Bash(python3:*)",
+      "Bash(bash --norc --noprofile -c 'curl -s \"\"https://api.github.com/repos/mohsen3/zmk-keyboard-cornix/actions/jobs/54659672982/logs\"\" | grep -E \"\"CONFIG_ZMK_SPLIT\"\" | head -20')",
+      "Bash(bash --norc --noprofile -c 'curl -s \"\"https://api.github.com/repos/mohsen3/zmk-keyboard-cornix/actions/jobs/54659672996/logs\"\" | grep -E \"\"CONFIG_ZMK_SPLIT\"\" | head -20')",
+      "Bash(git restore:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh run:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

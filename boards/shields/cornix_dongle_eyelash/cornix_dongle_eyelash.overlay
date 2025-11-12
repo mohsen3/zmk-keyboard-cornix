@@ -11,6 +11,9 @@
         rows = <0>;
         events = <0>;
     };
+    aliases {
+        st7789 = &oled;
+    };
 };
 // vim: set ft=dts :
 &pinctrl {
