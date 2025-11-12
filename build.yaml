@@ -24,3 +24,7 @@ include:
   - board: cornix_right
     shield: settings_reset
     artifact-name: reset
+
+  - board: cornix_dongle
+    shield: cornix_dongle_eyelash prospector_adapter
+    artifact-name: cornix_dongle
