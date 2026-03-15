@@ -25,6 +25,10 @@ include:
     shield: settings_reset
     artifact-name: reset
 
+  - board: cornix_ph_right
+    shield: cornix_indicator
+    artifact-name: cornix_ph_right
+
   - board: cornix_dongle
     shield: cornix_dongle_eyelash prospector_adapter
     artifact-name: cornix_dongle

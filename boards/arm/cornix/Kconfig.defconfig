@@ -10,8 +10,8 @@ config BOARD
 
 endif # BOARD_CORNIX
 
-## Peripheral device (left side)
-if BOARD_CORNIX_LEFT
+## Peripheral devices (left side and phantom right for dongle mode)
+if BOARD_CORNIX_LEFT || BOARD_CORNIX_PH_RIGHT
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default n
@@ -27,7 +27,7 @@ config ZMK_KSCAN_DEBOUNCE_PRESS_MS
 config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
     default 5
 
-endif # BOARD_CORNIX_LEFT
+endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_PH_RIGHT
 
 ## Main device (right side)
 if BOARD_CORNIX_RIGHT || BOARD_CORNIX_DONGLE
@@ -78,7 +78,7 @@ config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
 endif # BOARD_CORNIX_PH_LEFT
 
 # Common options for both sides
-if BOARD_CORNIX_LEFT  || BOARD_CORNIX_DONGLE || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT
+if BOARD_CORNIX_LEFT  || BOARD_CORNIX_DONGLE || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
 
 
 config BT_CTLR
@@ -101,7 +101,7 @@ config ZMK_RGB_UNDERGLOW
 config ZMK_RGB_UNDERGLOW_EXT_POWER
 	default n
 
-endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT
+endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
 
 
 # vim: set ft=kconfig:
