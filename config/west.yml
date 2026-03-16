@@ -19,16 +19,12 @@ manifest:
       remote: urob
       revision: main
       clone-depth: 1
-    - name: zmk-rgbled-widget
-      remote: hitsmaxft
-      revision: main
-      clone-depth: 1
     - name: zmk-dongle-display
       remote: hitsmaxft
       revision: main
       clone-depth: 1
     - name: prospector-zmk-module
       remote: carrefinho
-      revision: main
+      revision: core/zephyr-4-1
   self:
     path: config
