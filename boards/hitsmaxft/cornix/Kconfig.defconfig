@@ -55,9 +55,6 @@ endif # BOARD_CORNIX_RIGHT || BOARD_CORNIX_DONGLE
 if BOARD_CORNIX_LEFT || BOARD_CORNIX_DONGLE || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
 
 
-config BT_CTLR
-    default BT
-
 config BOARD_CORNIX_CHARGER
     default y
 
@@ -68,8 +65,6 @@ config ZMK_BLE
 	default y
 
 ## disable rgb by default
-config WS2812_STRIP
-	default n
 config ZMK_RGB_UNDERGLOW
 	default n
 config ZMK_RGB_UNDERGLOW_EXT_POWER
