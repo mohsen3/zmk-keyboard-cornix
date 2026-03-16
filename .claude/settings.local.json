@@ -3,7 +3,8 @@
     "allow": [
       "Bash(done)",
       "Bash(MERMAID_BIN=/Users/mohsen.mollanoori/.claude/mmdc-wrapper.sh pandoc:*)",
-      "WebFetch(domain:zmk.dev)"
+      "WebFetch(domain:zmk.dev)",
+      "WebFetch(domain:raw.githubusercontent.com)"
     ],
     "deny": [],
     "ask": []
