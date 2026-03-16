@@ -1,0 +1,17 @@
+boards:
+  - name: cornix_left
+    vendor: hitsmaxft
+    socs:
+      - name: nrf52840
+  - name: cornix_right
+    vendor: hitsmaxft
+    socs:
+      - name: nrf52840
+  - name: cornix_dongle
+    vendor: hitsmaxft
+    socs:
+      - name: nrf52840
+  - name: cornix_ph_right
+    vendor: hitsmaxft
+    socs:
+      - name: nrf52840

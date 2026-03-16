@@ -10,6 +10,5 @@ features:
 siblings:
   - cornix_left
   - cornix_right
-  - cornix_ph_left
   - cornix_ph_right
   - cornix_dongle

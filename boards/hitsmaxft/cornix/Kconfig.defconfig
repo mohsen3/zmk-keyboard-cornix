@@ -1,14 +1,7 @@
-# Electronut Labs Papyr board configuration
+# Cornix board configuration
 
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
-
-if BOARD_CORNIX
-
-config BOARD
-    default "cornix"
-
-endif # BOARD_CORNIX
 
 ## Peripheral devices (left side and phantom right for dongle mode)
 if BOARD_CORNIX_LEFT || BOARD_CORNIX_PH_RIGHT
@@ -56,29 +49,10 @@ config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
 config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY
 	default y
 
-endif # BOARD_CORNIX_RIGHT
+endif # BOARD_CORNIX_RIGHT || BOARD_CORNIX_DONGLE
 
-## Legacy peripheral device config
-if BOARD_CORNIX_PH_LEFT
-
-config ZMK_SPLIT_ROLE_CENTRAL
-    default n
-
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default n
-
-# Optimized keyboard debouncing for low latency
-# Reduced press from 3ms to 2ms for faster response with stability
-# Release kept at 5ms for stability
-config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 2
-config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
-    default 5
-
-endif # BOARD_CORNIX_PH_LEFT
-
-# Common options for both sides
-if BOARD_CORNIX_LEFT  || BOARD_CORNIX_DONGLE || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
+# Common options for all board variants
+if BOARD_CORNIX_LEFT || BOARD_CORNIX_DONGLE || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
 
 
 config BT_CTLR
@@ -101,7 +75,7 @@ config ZMK_RGB_UNDERGLOW
 config ZMK_RGB_UNDERGLOW_EXT_POWER
 	default n
 
-endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT
+endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_RIGHT || BOARD_CORNIX_DONGLE
 
 
 # vim: set ft=kconfig:
