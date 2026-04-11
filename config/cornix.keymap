@@ -292,13 +292,15 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                    &kp Y            &kp U  &kp I      &kp O           &kp P         &kp BACKSPACE
-&kp TAB           &kp A         &kp S         &kp D  &kp F  &kp G                    &kp H            &kp J  &kp K      &kp L           &kp SEMI      &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C  &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA  &kp DOT         &kp SLASH     &mt RIGHT_SHIFT BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &mo 4      &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
+&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                    &kp Y            &kp U  &kp I          &kp O           &kp P         &kp BACKSPACE
+&kp TAB           &kp A         &kp S         &kp D  &kp F  &kp G                    &kp H            &kp J  &kp K          &kp L           &kp SEMI      &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C  &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA      &kp DOT         &kp SLASH     &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &kp RIGHT_GUI  &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
             >;
 
-            sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
 
         Navi_layer {
@@ -327,10 +329,10 @@
         Apps_layer {
             display-name = "Apps";
             bindings = <
-&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                              &kp RG(NUMBER_9)       &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
-&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                  &kp RG(LEFT_BRACKET)   &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
-&trans       &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &trans  &kp RS(RA(RC(RG(M))))  &kp RA(RG(LEFT))       &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))    &trans
-&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                          &trans                 &trans                 &trans                  &trans                &trans               &kp RG(RS(ENTER))
+&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                              &kp RG(NUMBER_9)      &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
+&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                  &kp RG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
+&trans       &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &trans  &kp RS(RG(ENTER))     &kp RA(RG(LEFT))       &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))    &trans
+&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                          &trans                &trans                 &trans                  &trans                &trans               &kp RG(RS(RA(RC(M))))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
