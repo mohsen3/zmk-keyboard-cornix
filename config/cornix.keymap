@@ -16,7 +16,6 @@
 #define DEBUG  7
 #define APPS   8
 #define SELECTION 9
-
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left hand
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right hand
 #define THUMBS LH1 LH0 RH0 RH1
@@ -42,6 +41,7 @@
 
         // Timeless home row mods (urob)
         // https://github.com/urob/zmk-config/tree/main#timeless-homerow-mods
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -50,6 +50,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
@@ -62,6 +63,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
         };
@@ -276,12 +278,6 @@
             require-prior-idle-ms = <300>;
         };
 
-        cb_control_r_reverse_search {
-            bindings = <&kp LC(R)>;
-            key-positions = <4 3>;
-            require-prior-idle-ms = <900>;
-        };
-
         cb_left_enter {
             bindings = <&kp ENTER>;
             key-positions = <2 3 4>;
@@ -302,10 +298,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                    &kp Y            &kp U  &kp I          &kp O           &kp P         &kp BACKSPACE
+&kp ESCAPE        &kp Q         &kp W         &kp E         &kp R        &kp T                    &kp Y            &kp U        &kp I          &kp O           &kp P            &kp BACKSPACE
 &kp TAB           &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F  &kp G                    &kp H            &hmr RGUI J  &hmr RSHFT K   &hmr RALT L     &hmr RCTRL SEMI  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C  &kp V  &kp B      &none  &none  &kp N            &kp M  &kp COMMA      &kp DOT         &kp SLASH     &mt RIGHT_SHIFT BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2  &kp SPACE                &sk RIGHT_SHIFT  &mo 1  &kp RIGHT_GUI  &kp DOWN_ARROW  &kp UP_ARROW  &kp ENTER
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V        &kp B      &none  &none  &kp N            &kp M        &kp COMMA      &kp DOT         &kp SLASH        &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3         &mo 2        &kp SPACE                &sk RIGHT_SHIFT  &mo 1        &kp RIGHT_GUI  &kp DOWN_ARROW  &kp UP_ARROW     &kp ENTER
             >;
 
             sensor-bindings =
@@ -339,10 +335,10 @@
         Apps_layer {
             display-name = "Apps";
             bindings = <
-&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                              &kp RG(NUMBER_9)      &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
-&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                  &kp RG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
+&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                                  &kp RG(NUMBER_9)      &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
+&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                      &kp RG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
 &trans       &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &kp LG(N0)  &kp RS(RG(ENTER))     &kp RA(RG(LEFT))       &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))    &trans
-&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                          &trans                &trans                 &trans                  &trans                &trans               &kp RG(RS(RA(RC(M))))
+&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                              &trans                &trans                 &trans                  &trans                &trans               &kp RG(RS(RA(RC(M))))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LG(EQUAL) LG(MINUS)>;
