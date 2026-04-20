@@ -1,12 +1,5 @@
 if SHIELD_CORNIX_DONGLE_EYELASH
 
-if ZMK_DISPLAY
-
-config I2C
-    default y
-
-endif # ZMK_DISPLAY
-
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -16,14 +9,14 @@ config LV_DPI_DEF
     default 148
 
 config LV_Z_BITS_PER_PIXEL
-    default 1
+    default 16
 
 choice LV_COLOR_DEPTH
-    default LV_COLOR_DEPTH_1
+    default LV_COLOR_DEPTH_16
 endchoice
 
 endif # LVGL
 
-endif # END ALL
+endif
 
 #vim: set ft=kconfig:
