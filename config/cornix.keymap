@@ -192,7 +192,7 @@
 
         cb_cmd_w {
             bindings = <&kp LG(W)>;
-            key-positions = <1 2>;
+            key-positions = <1 2 3>;
             timeout-ms = <50>;
             require-prior-idle-ms = <300>;
         };
