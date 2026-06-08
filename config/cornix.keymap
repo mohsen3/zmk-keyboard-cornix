@@ -320,6 +320,11 @@
             bindings = <&kp LG(W)>;
             key-positions = <1 2 3>;
         };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <20 21>;
+        };
     };
 
     keymap {
