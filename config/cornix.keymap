@@ -341,10 +341,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E         &kp R        &kp T                    &kp Y                  &kp U        &kp I          &kp O           &kp P            &kp BACKSPACE
-&kp TAB           &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F  &kp G                    &kp H                  &hmr RGUI J  &hmr RSHFT K   &hmr RALT L     &hmr RCTRL SEMI  &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V        &kp B      &none  &none  &kp N                  &kp M        &kp COMMA      &kp DOT         &kp SLASH        &mt RIGHT_SHIFT BACKSLASH
-&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3         &mo 2        &kp SPACE                &sk_shift RIGHT_SHIFT  &mo 1        &kp RIGHT_GUI  &kp DOWN_ARROW  &kp UP_ARROW     &kp ENTER
+&kp ESCAPE        &kp Q         &kp W         &kp E         &kp R        &kp T                                    &kp Y                  &kp U        &kp I          &kp O           &kp P            &kp BACKSPACE
+&kp TAB           &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F  &kp G                                    &kp H                  &hmr RGUI J  &hmr RSHFT K   &hmr RALT L     &hmr RCTRL SEMI  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V        &kp B      &none  &kp RS(RA(RC(RG(W))))  &kp N                  &kp M        &kp COMMA      &kp DOT         &kp SLASH        &mt RIGHT_SHIFT BACKSLASH
+&kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 3         &mo 2        &kp SPACE                                &sk_shift RIGHT_SHIFT  &mo 1        &kp RIGHT_GUI  &kp DOWN_ARROW  &kp UP_ARROW     &kp ENTER
             >;
 
             sensor-bindings =
@@ -355,10 +355,10 @@
         Navi_layer {
             display-name = "Navi";
             bindings = <
-&kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                   &mkp MB1                        &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &kp RS(RA(RC(RG(A))))
-&trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                    &kp RS(RA(RC(RG(ENTER))))       &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &kp RG(RC(RA(RS(B))))
-&trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &trans  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &kp RG(RC(RA(RS(C))))
-&trans     &none  &none           &trans          &trans           &trans                          &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &kp RG(RC(RA(RS(D))))
+&kp GRAVE  &none  &none           &mmv MOVE_UP    &kp PAGE_UP      &kp PAGE_DOWN                                  &mkp MB1                        &mkp MB3        &mkp MB2            &msc SCRL_UP         &msc SCRL_DOWN   &kp RS(RA(RC(RG(A))))
+&trans     &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_UP                                   &kp RS(RA(RC(RG(ENTER))))       &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW  &kp RG(RC(RA(RS(B))))
+&trans     &none  &none           &none           &none            &msc SCRL_DOWN  &trans  &kp RS(RA(RC(RG(X))))  &kp RS(RA(RC(RG(LEFT_ARROW))))  &kp RC(A)       &kp RA(LEFT_ARROW)  &kp RA(RIGHT_ARROW)  &kp RC(E)        &kp RG(RC(RA(RS(C))))
+&trans     &none  &none           &trans          &trans           &trans                                         &trans                          &trans          &trans              &kp PAGE_DOWN        &kp PAGE_UP      &kp RG(RC(RA(RS(D))))
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
@@ -366,10 +366,10 @@
 
         Num {
             bindings = <
-&kp MINUS  &kp N1     &kp N2          &kp N3     &kp N4     &kp N5                   &kp LS(CARET)   &kp LS(AMPS)     &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)      &trans
-&kp PLUS   &kp N6     &kp N7          &kp N8     &kp N9     &kp N0                   &kp LS(EXCL)    &kp LS(AT)       &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)     &trans
-&kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp GRAVE  &kp COMMA  &kp DOT  &trans  &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION      &trans
-&kp STAR   &trans     &trans          &trans     &trans     &trans                   &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
+&kp MINUS  &kp N1     &kp N2          &kp N3     &kp N4     &kp N5                                  &kp LS(CARET)   &kp LS(AMPS)     &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)      &trans
+&kp PLUS   &kp N6     &kp N7          &kp N8     &kp N9     &kp N0                                  &kp LS(EXCL)    &kp LS(AT)       &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)     &trans
+&kp FSLH   &kp EQUAL  &kp UNDERSCORE  &kp GRAVE  &kp COMMA  &kp DOT  &trans  &kp RS(RA(RC(RG(Y))))  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LBKT       &kp RBKT      &kp QUESTION      &trans
+&kp STAR   &trans     &trans          &trans     &trans     &trans                                  &trans          &trans           &trans         &kp RG(DOWN)  &kp RG(UP_ARROW)  &trans
             >;
 
             sensor-bindings = <&scroll_encoder &inc_dec_kp PG_UP PG_DN>;
@@ -378,10 +378,10 @@
         Apps_layer {
             display-name = "Apps";
             bindings = <
-&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                                  &kp RG(NUMBER_9)      &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
-&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                      &kp RG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
-&trans       &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &kp LG(N0)  &kp RS(RG(ENTER))     &kp RA(RG(LEFT))       &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))    &trans
-&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                              &trans                &trans                 &trans                  &trans                &trans               &kp RG(RS(RA(RC(M))))
+&trans       &kp LG(NUMBER_1)       &kp LG(NUMBER_2)       &kp LG(F)              &kp LG(R)              &kp LG(T)                                             &kp RG(NUMBER_9)      &kp RS(RA(RC(RG(J))))  &kp RS(RA(RC(RG(K))))   &kp RG(O)             &kp RG(P)            &kp RG(RC(RA(RS(L))))
+&kp LG(TAB)  &kp LS(LA(LC(LG(E))))  &kp LS(LA(LC(LG(F))))  &kp LS(LA(LC(LG(G))))  &kp LS(LA(LC(LG(H))))  &kp LS(LA(LC(LG(I))))                                 &kp RG(LEFT_BRACKET)  &kp LG(LEFT_BRACE)     &kp RG(K)               &kp RG(L)             &kp LG(RIGHT_BRACE)  &kp RG(RIGHT_BRACKET)
+&trans       &kp LG(Z)              &kp LG(X)              &kp LG(C)              &kp LG(V)              &kp LG(B)              &trans  &kp RS(RA(RC(RG(Z))))  &kp RS(RG(ENTER))     &kp RA(RG(LEFT))       &kp LG(LA(DOWN_ARROW))  &kp LG(LA(UP_ARROW))  &kp RA(RG(RIGHT))    &trans
+&trans       &trans                 &trans                 &trans                 &trans                 &kp LG(SPACE)                                         &trans                &trans                 &trans                  &trans                &trans               &kp RG(RS(RA(RC(M))))
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LG(EQUAL) LG(MINUS)>;
